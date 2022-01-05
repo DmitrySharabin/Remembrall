@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct Item: Identifiable, Codable {
+struct Item: Identifiable, Codable, Comparable {
     let id: UUID
     let name: String
+    
+    static func < (lhs: Item, rhs: Item) -> Bool {
+        lhs.name < rhs.name
+    }
 }

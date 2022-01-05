@@ -20,7 +20,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.items) { item in
+                ForEach(viewModel.items.sorted()) { item in
                     NavigationLink {
                         Text("Detail View")
                     } label: {
