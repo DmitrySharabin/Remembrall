@@ -16,6 +16,7 @@
 		8E6B189D2785E10100A90407 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B189C2785E10100A90407 /* Item.swift */; };
 		8E6B189F2785E16E00A90407 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B189E2785E16E00A90407 /* ContentView-ViewModel.swift */; };
 		8E6B18A12785E26400A90407 /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B18A02785E26400A90407 /* FileManager-DocumentsDirectory.swift */; };
+		8E6B18A327861A6100A90407 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6B18A227861A6100A90407 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		8E6B189C2785E10100A90407 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		8E6B189E2785E16E00A90407 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
 		8E6B18A02785E26400A90407 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
+		8E6B18A227861A6100A90407 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				8E6B188A2785CCA600A90407 /* RemembrallApp.swift */,
 				8E6B18A02785E26400A90407 /* FileManager-DocumentsDirectory.swift */,
 				8E6B188C2785CCA600A90407 /* ContentView.swift */,
+				8E6B18A227861A6100A90407 /* DetailView.swift */,
 				8E6B189E2785E16E00A90407 /* ContentView-ViewModel.swift */,
 				8E6B18982785D11C00A90407 /* ImagePicker.swift */,
 				8E6B189A2785D66B00A90407 /* SetName.swift */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E6B189D2785E10100A90407 /* Item.swift in Sources */,
+				8E6B18A327861A6100A90407 /* DetailView.swift in Sources */,
 				8E6B18A12785E26400A90407 /* FileManager-DocumentsDirectory.swift in Sources */,
 				8E6B189F2785E16E00A90407 /* ContentView-ViewModel.swift in Sources */,
 				8E6B18992785D11C00A90407 /* ImagePicker.swift in Sources */,

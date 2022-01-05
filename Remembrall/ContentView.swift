@@ -22,7 +22,7 @@ struct ContentView: View {
             List {
                 ForEach(viewModel.items.sorted()) { item in
                     NavigationLink {
-                        Text("Detail View")
+                        DetailView(image: viewModel.images[item.id]!, name: item.name)
                     } label: {
                         HStack {
                             Image(uiImage: viewModel.images[item.id]!)
