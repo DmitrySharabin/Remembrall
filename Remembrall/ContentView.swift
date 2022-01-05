@@ -27,8 +27,9 @@ struct ContentView: View {
                         HStack {
                             Image(uiImage: viewModel.images[item.id]!)
                                 .resizable()
-                                .scaledToFit()
-                                .frame(height: 50)
+                                .scaledToFill()
+                                .frame(width: 70)
+                                .frame(maxHeight: 50)
                                 .clipShape(
                                     RoundedRectangle(cornerRadius: 5)
                                 )
@@ -48,7 +49,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .sheet(isPresented: $showingImagePicker, onDismiss: showImageNameSheet) {
+            .sheet(isPresented: $showingImagePicker) {
                 ImagePicker(image: $inputImage)
             }
             .sheet(isPresented: $showingImageNameSheet) {
@@ -56,12 +57,9 @@ struct ContentView: View {
                     viewModel.add(image: inputImage, name: name)
                 }
             }
-        }
-    }
-    
-    func showImageNameSheet() {
-        if inputImage != nil {
-            showingImageNameSheet = true
+            .onChange(of: inputImage) { _ in
+                showingImageNameSheet = true
+            }
         }
     }
 }

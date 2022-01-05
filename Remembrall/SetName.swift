@@ -25,7 +25,6 @@ struct SetName: View {
             image?
                 .resizable()
                 .scaledToFit()
-                .ignoresSafeArea()
             
             Form {
                 TextField("Enter image name", text: $name)
