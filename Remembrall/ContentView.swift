@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFAudio
 
 struct ContentView: View {
     
@@ -22,7 +23,7 @@ struct ContentView: View {
             List {
                 ForEach(viewModel.items.sorted()) { item in
                     NavigationLink {
-                        DetailView(image: viewModel.images[item.id]!, name: item.name)
+                        DetailView(image: viewModel.images[item.id]!, item: item)
                     } label: {
                         HStack {
                             Image(uiImage: viewModel.images[item.id]!)

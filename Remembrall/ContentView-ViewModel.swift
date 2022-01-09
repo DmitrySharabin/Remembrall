@@ -16,6 +16,8 @@ extension ContentView {
         
         private let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedImages")
         
+        private let locationFetcher = LocationFetcher()
+        
         init() {
             do {
                 let data = try Data(contentsOf: savePath)
@@ -35,13 +37,19 @@ extension ContentView {
                 items = []
                 images = [:]
             }
+            
+            locationFetcher.start()
         }
         
         func add(image: UIImage?, name: String) {
             guard let image = image else { return }
-            
+            guard let location = locationFetcher.lastKnownLocation else { return }
+
             let id = UUID()
-            let newItem = Item(id: id, name: name)
+            let latitude = location.latitude
+            let longitude = location.longitude
+            
+            let newItem = Item(id: id, name: name, latitude: latitude, longitude: longitude)
             
             items.append(newItem)
             images[id] = image
